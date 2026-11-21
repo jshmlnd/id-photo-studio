@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Jost', 'Century Gothic', ui-sans-serif, system-ui, sans-serif;
+
+  /* Primaries rationed by role */
+  --color-ink: #17150f; /* near-black ink: text and hairlines */
+  --color-active: #d64533; /* red circle: the active state */
+  --color-structure: #2b5aa7; /* blue square: structure */
+  --color-alert: #f0b429; /* yellow triangle: attention */
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    min-width: 320px;
+    background: #ffffff;
+    color: var(--color-ink);
+  }
+
+  button,
+  input {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input[type='range'] {
+    width: 100%;
+  }
+
+  /* Browser chrome carries the world too */
+  ::selection {
+    background: var(--color-structure);
+    color: #ffffff;
+  }
+
+  input {
+    caret-color: var(--color-active);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(23, 21, 15, 0.35) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgba(23, 21, 15, 0.35);
+    border: 3px solid #ffffff;
+    border-radius: 0;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Zoom control: ink hairline track, red circle thumb */
+  input[type='range'] {
+    appearance: none;
+    background: transparent;
+    height: 20px;
+    cursor: ew-resize;
+  }
+
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 2px;
+    background: rgba(23, 21, 15, 0.3);
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 9999px;
+    background: var(--color-active);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 1px var(--color-active);
+    margin-top: -7px;
+  }
+
+  input[type='range']::-moz-range-track {
+    height: 2px;
+    background: rgba(23, 21, 15, 0.3);
+  }
+
+  input[type='range']::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+    background: var(--color-active);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 1px var(--color-active);
+  }
+
+  input[type='range']:focus-visible {
+    outline-offset: 4px;
+  }
+}
+
+/* Visible baseline rhythm across the worktable ground */
+.baseline-grid {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 27px,
+    rgba(23, 21, 15, 0.06) 27px 28px
+  );
+}
+
+/* Composition grid inside the empty frame */
+.square-grid {
+  background-image:
+    repeating-linear-gradient(to right, rgba(43, 90, 167, 0.12) 0 1px, transparent 1px 56px),
+    repeating-linear-gradient(to bottom, rgba(43, 90, 167, 0.12) 0 1px, transparent 1px 56px);
+}
+
+/* The one authored moment: straight-line translation, honest easing */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in {
+  animation: slide-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}

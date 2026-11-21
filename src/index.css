@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+/* dark-only site: cult-ui components key their dark look off the .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant fine-hover (@media (hover: hover) and (pointer: fine));
+
+:root {
+  --radius: 1.25rem;
+  --background: #0a0a0a;
+  --foreground: #f5f5f5;
+  --card: #171717;
+  --card-foreground: #f5f5f5;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --secondary: #1f1f1f;
+  --secondary-foreground: #f5f5f5;
+  --border: #2a2a2a;
+  --input: #2a2a2a;
+  --ring: #818cf8;
+  --primary: #f5f5f5;
+  --primary-foreground: #0a0a0a;
+  --accent: #6366f1;
+  --accent-foreground: #ffffff;
+  --destructive: #f87171;
+  --warning: #fbbf24;
+}
+
+@theme inline {
+  --font-sans: 'Geist', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-warning: var(--warning);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color-scheme: dark;
+    /* keyboard focus scrolls controls clear of the sticky preview + download group */
+    scroll-padding-bottom: 15rem;
+  }
+
+  body {
+    min-width: 320px;
+    background: var(--background);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button,
+  input {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+
+  input {
+    caret-color: var(--ring);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #3a3a3a transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #3a3a3a;
+    border: 3px solid var(--background);
+    border-radius: 9999px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* zoom slider: recessed track, raised white thumb */
+  input[type='range'] {
+    width: 100%;
+    appearance: none;
+    background: transparent;
+    height: 24px;
+    cursor: ew-resize;
+  }
+
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 9999px;
+    background: #0a0a0a;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background: linear-gradient(to bottom, #fafafa, #d4d4d4);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    margin-top: -6px;
+  }
+
+  input[type='range']::-moz-range-track {
+    height: 6px;
+    border-radius: 9999px;
+    background: #0a0a0a;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  input[type='range']::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border: 0;
+    border-radius: 9999px;
+    background: linear-gradient(to bottom, #fafafa, #d4d4d4);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  input[type='range']:disabled {
+    cursor: not-allowed;
+  }
+
+  input[type='range']:focus-visible {
+    outline-offset: 4px;
+    border-radius: 9999px;
+  }
+}
+
+/* the one authored moment: the portrait settles into the stage from blur to sharp */
+@keyframes settle {
+  from {
+    opacity: 0;
+    filter: blur(14px);
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+.settle {
+  animation: settle 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .settle {
+    animation: none;
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T00:00:00Z",
+  "title": "Design System: ID Photo Studio",
+  "extensions": {
+    "colorMeta": {
+      "background": { "role": "neutral", "displayName": "Bench Black", "canonical": "#0a0a0a", "tonalRamp": ["#0a0a0a", "#171717", "#262626", "#404040", "#525252", "#737373", "#a3a3a3", "#e5e5e5"] },
+      "foreground": { "role": "neutral", "displayName": "Paper White", "canonical": "#f5f5f5", "tonalRamp": ["#0a0a0a", "#171717", "#262626", "#404040", "#737373", "#a3a3a3", "#e5e5e5", "#f5f5f5"] },
+      "card": { "role": "neutral", "displayName": "Card Graphite", "canonical": "#171717", "tonalRamp": ["#0a0a0a", "#171717", "#1f1f1f", "#262626", "#404040", "#525252", "#737373", "#a3a3a3"] },
+      "secondary": { "role": "neutral", "displayName": "Secondary Graphite", "canonical": "#1f1f1f", "tonalRamp": ["#0a0a0a", "#171717", "#1f1f1f", "#262626", "#404040", "#525252", "#737373", "#a3a3a3"] },
+      "muted": { "role": "neutral", "displayName": "Muted Graphite", "canonical": "#262626", "tonalRamp": ["#0a0a0a", "#171717", "#262626", "#404040", "#525252", "#737373", "#a3a3a3", "#e5e5e5"] },
+      "muted-foreground": { "role": "neutral", "displayName": "Ash", "canonical": "#a3a3a3", "tonalRamp": ["#171717", "#262626", "#404040", "#525252", "#737373", "#a3a3a3", "#d4d4d4", "#e5e5e5"] },
+      "border": { "role": "neutral", "displayName": "Hairline", "canonical": "#2a2a2a", "tonalRamp": ["#0a0a0a", "#171717", "#2a2a2a", "#3a3a3a", "#525252", "#737373", "#a3a3a3", "#e5e5e5"] },
+      "primary": { "role": "primary", "displayName": "Bench White", "canonical": "#f5f5f5", "tonalRamp": ["#404040", "#737373", "#a3a3a3", "#d4d4d4", "#e5e5e5", "#f5f5f5", "#fafafa", "#ffffff"] },
+      "primary-foreground": { "role": "neutral", "displayName": "Bench Black (on white)", "canonical": "#0a0a0a", "tonalRamp": ["#0a0a0a", "#171717", "#262626", "#404040", "#525252", "#737373", "#a3a3a3", "#e5e5e5"] },
+      "accent": { "role": "secondary", "displayName": "Darkroom Indigo", "canonical": "#6366f1", "tonalRamp": ["#1e1b4b", "#312e81", "#3730a3", "#4338ca", "#4f46e5", "#6366f1", "#818cf8", "#c7d2fe"] },
+      "accent-foreground": { "role": "neutral", "displayName": "Pure White", "canonical": "#ffffff", "tonalRamp": ["#525252", "#737373", "#a3a3a3", "#d4d4d4", "#e5e5e5", "#f5f5f5", "#fafafa", "#ffffff"] },
+      "ring": { "role": "secondary", "displayName": "Indigo Ring", "canonical": "#818cf8", "tonalRamp": ["#1e1b4b", "#312e81", "#3730a3", "#4338ca", "#6366f1", "#818cf8", "#a5b4fc", "#c7d2fe"] },
+      "warning": { "role": "tertiary", "displayName": "Signal Amber", "canonical": "#fbbf24", "tonalRamp": ["#451a03", "#78350f", "#92400e", "#b45309", "#d97706", "#f59e0b", "#fbbf24", "#fef3c7"] },
+      "destructive": { "role": "tertiary", "displayName": "Signal Red", "canonical": "#f87171", "tonalRamp": ["#450a0a", "#7f1d1d", "#991b1b", "#b91c1c", "#dc2626", "#ef4444", "#f87171", "#fecaca"] },
+      "print-paper": { "role": "neutral", "displayName": "Print Paper", "canonical": "#ffffff", "tonalRamp": ["#cfccc5", "#dbd8d2", "#e5e3de", "#eeede9", "#f5f4f2", "#fbfbfa", "#ffffff", "#ffffff"] },
+      "print-ink": { "role": "neutral", "displayName": "Print Ink", "canonical": "#17150f", "tonalRamp": ["#17150f", "#2e2a22", "#46413a", "#5f5950", "#7d766c", "#a09a90", "#c4bfb6", "#e9e6e0"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The single page headline; 1.875rem below 640px, 2.25rem above, balanced." },
+      "title": { "displayName": "Title", "purpose": "Card titles; the wordmark uses 15px semibold with tight tracking." },
+      "body": { "displayName": "Body", "purpose": "The one-line promise under the headline." },
+      "label": { "displayName": "Label", "purpose": "Field labels, segmented options, preview caption." },
+      "hint": { "displayName": "Hint", "purpose": "Field hints and card descriptions in Ash." },
+      "mono": { "displayName": "Mono", "purpose": "Measurements only: px, dpi, zoom percent, character count." }
+    },
+    "shadows": [
+      { "name": "well", "value": "inset 0 1px 3px rgba(0,0,0,0.8), 0 1px 0 rgba(255,255,255,0.05)", "purpose": "Recessed surfaces: segmented tracks, inputs, crop stage, preview tray." },
+      { "name": "raised-bubble", "value": "inset 0 1px 0 rgba(255,255,255,0.08), 0 2px 6px rgba(0,0,0,0.5)", "purpose": "Selected segment and logo tile." },
+      { "name": "thumb", "value": "0 2px 6px rgba(0,0,0,0.5), inset 0 -1px 0 rgba(0,0,0,0.15)", "purpose": "Slider and switch knobs." },
+      { "name": "print-lift", "value": "0 10px 24px rgba(0,0,0,0.6)", "purpose": "The white print preview canvas, read as paper." },
+      { "name": "dock", "value": "0 -10px 24px rgba(10,10,10,0.55)", "purpose": "Sticky preview and Download dock, casting upward." },
+      { "name": "guide-hairline", "value": "0 0 0 1px rgba(10,10,10,0.3)", "purpose": "Dark hairline under crop-guide strokes so they read on light photos." }
+    ],
+    "motion": [
+      { "name": "settle", "value": "settle 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; from opacity 0, blur(14px), scale(1.06)", "purpose": "The one authored moment: the portrait settles into the stage on load. Removed under prefers-reduced-motion." },
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Settle and the paper-size disclosure (0.3s height + opacity)." },
+      { "name": "segment-spring", "value": "spring, bounce 0.19, duration 0.4s", "purpose": "Selected bubble sliding between segmented options (shared layoutId)." },
+      { "name": "rolling-number", "value": "spring, mass 0.8, stiffness 75, damping 15", "purpose": "Pixel-dimension readout rolling to new values." },
+      { "name": "switch", "value": "200ms ease-out", "purpose": "Switch track color and knob travel." },
+      { "name": "texture-button", "value": "300ms ease-in-out", "purpose": "Texture button face lightening on hover and active." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Texture Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one call to action: Download, full width at the foot of the dock.",
+      "html": "<button class=\"ds-btn-primary\"><span class=\"ds-btn-primary-face\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 15V3\"/><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><path d=\"m7 10 5 5 5-5\"/></svg>Download photo</span></button>",
+      "css": ".ds-btn-primary { width: 100%; padding: 1px; border: 2px solid #000; border-radius: 12px; background: linear-gradient(to bottom, #fff, rgba(255,255,255,0.8)); cursor: pointer; font-family: Geist, ui-sans-serif, system-ui, sans-serif; transition: all 300ms ease-in-out; } .ds-btn-primary-face { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 16px; border-radius: 10px; background: linear-gradient(to bottom, #e5e5e5, #fafafa); color: rgba(0,0,0,0.8); font-size: 16px; font-weight: 600; transition: all 300ms ease-in-out; } .ds-btn-primary:hover .ds-btn-primary-face { background: linear-gradient(to bottom, #e7e5e4, #e5e5e5); } .ds-btn-primary:active .ds-btn-primary-face { background: linear-gradient(to bottom, #d6d3d1, #d4d4d4); } .ds-btn-primary:focus-visible { outline: 2px solid var(--ring, #818cf8); outline-offset: 2px; } .ds-btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }"
+    },
+    {
+      "name": "Minimal Texture Button",
+      "kind": "button",
+      "refersTo": "button-minimal",
+      "description": "Small secondary actions: Replace, Reset.",
+      "html": "<button class=\"ds-btn-minimal\"><span class=\"ds-btn-minimal-face\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"/><path d=\"M3 3v5h5\"/></svg>Reset</span></button>",
+      "css": ".ds-btn-minimal { padding: 1px; border: 2px solid #0a0a0a; border-radius: 6px; background: rgba(82,82,82,0.8); cursor: pointer; font-family: Geist, ui-sans-serif, system-ui, sans-serif; } .ds-btn-minimal-face { display: flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 4px; background: linear-gradient(to bottom, #262626, rgba(64,64,64,0.5)); color: #f5f5f5; font-size: 12px; transition: all 300ms ease-in-out; } .ds-btn-minimal:hover .ds-btn-minimal-face { background: linear-gradient(to bottom, #404040, rgba(64,64,64,0.6)); } .ds-btn-minimal:active .ds-btn-minimal-face { background: linear-gradient(to bottom, #262626, #404040); } .ds-btn-minimal:focus-visible { outline: 2px solid var(--ring, #818cf8); outline-offset: 2px; }"
+    },
+    {
+      "name": "Texture Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "The machined container: four nested hairline borders around a graphite gradient.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-b1\"><div class=\"ds-card-b2\"><div class=\"ds-card-b3\"><div class=\"ds-card-face\"><h3 class=\"ds-card-title\">Print settings</h3><p class=\"ds-card-desc\">Match the size your application asks for.</p></div></div></div></div></div>",
+      "css": ".ds-card { border: 1px solid rgba(42,42,42,0.3); border-radius: 20px; font-family: Geist, ui-sans-serif, system-ui, sans-serif; } .ds-card-b1 { border: 1px solid rgba(23,23,23,0.8); border-radius: 19px; } .ds-card-b2 { border: 1px solid #0a0a0a; border-radius: 18px; } .ds-card-b3 { border: 1px solid rgba(23,23,23,0.7); border-radius: 17px; } .ds-card-face { border: 1px solid rgba(64,64,64,0.5); border-radius: 16px; padding: 24px; background: linear-gradient(to bottom, rgba(23,23,23,0.7), rgba(31,31,31,0.5)); color: #737373; } .ds-card-title { margin: 0; font-size: 16px; font-weight: 600; color: #f5f5f5; } .ds-card-desc { margin: 4px 0 0; font-size: 14px; color: #a3a3a3; }"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "chip",
+      "refersTo": "segmented",
+      "description": "One pressed option in a recessed track; a raised bubble marks the choice.",
+      "html": "<div class=\"ds-seg\" role=\"group\"><button class=\"ds-seg-opt\" aria-pressed=\"false\">1 × 1 in</button><button class=\"ds-seg-opt\" aria-pressed=\"true\">2 × 2 in</button></div>",
+      "css": ".ds-seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; padding: 4px; border-radius: 14px; background: #0a0a0a; box-shadow: inset 0 1px 3px rgba(0,0,0,0.8), 0 1px 0 rgba(255,255,255,0.05); font-family: Geist, ui-sans-serif, system-ui, sans-serif; } .ds-seg-opt { padding: 10px 12px; border: 1px solid transparent; border-radius: 10px; background: transparent; color: #a3a3a3; font-size: 14px; font-weight: 500; cursor: pointer; transition: color 150ms; } .ds-seg-opt:hover { color: #f5f5f5; } .ds-seg-opt[aria-pressed=\"true\"] { color: #fff; border-color: rgba(255,255,255,0.1); background: linear-gradient(to bottom, #404040, #262626); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 2px 6px rgba(0,0,0,0.5); } .ds-seg-opt:focus-visible { outline: 2px solid var(--ring, #818cf8); outline-offset: 2px; }"
+    },
+    {
+      "name": "Switch",
+      "kind": "custom",
+      "refersTo": "switch-on",
+      "description": "Recessed off, indigo on; white gradient knob.",
+      "html": "<button class=\"ds-switch\" role=\"switch\" aria-checked=\"true\" aria-label=\"Add name strip\"><span class=\"ds-switch-knob\"></span></button>",
+      "css": ".ds-switch { position: relative; width: 44px; height: 24px; padding: 0; border: 0; border-radius: 9999px; background: #262626; box-shadow: inset 0 1px 3px rgba(0,0,0,0.7); cursor: pointer; transition: background-color 200ms; } .ds-switch[aria-checked=\"true\"] { background: var(--accent, #6366f1); box-shadow: inset 0 1px 2px rgba(0,0,0,0.3); } .ds-switch-knob { position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 9999px; background: linear-gradient(to bottom, #fff, #e5e5e5); box-shadow: 0 2px 4px rgba(0,0,0,0.4); transition: transform 200ms ease-out; } .ds-switch[aria-checked=\"true\"] .ds-switch-knob { transform: translateX(20px); } .ds-switch:focus-visible { outline: 2px solid var(--ring, #818cf8); outline-offset: 2px; }"
+    },
+    {
+      "name": "Name Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Recessed text field; uppercases input; indigo border on focus.",
+      "html": "<input class=\"ds-input\" placeholder=\"YOUR NAME\" maxlength=\"40\" />",
+      "css": ".ds-input { width: 100%; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; background: #0a0a0a; box-shadow: inset 0 1px 3px rgba(0,0,0,0.8), 0 1px 0 rgba(255,255,255,0.05); color: #fafafa; font-family: Geist, ui-sans-serif, system-ui, sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.025em; text-transform: uppercase; caret-color: var(--ring, #818cf8); outline: none; transition: border-color 150ms; } .ds-input::placeholder { color: #8f8f8f; } .ds-input:focus { border-color: rgba(129,140,248,0.6); } .ds-input:focus-visible { outline: 2px solid var(--ring, #818cf8); outline-offset: 2px; }"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "description": "Slim header: raised logo tile and wordmark, privacy note with indigo shield.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-logo\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#fff\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 7V5a2 2 0 0 1 2-2h2\"/><path d=\"M17 3h2a2 2 0 0 1 2 2v2\"/><path d=\"M21 17v2a2 2 0 0 1-2 2h-2\"/><path d=\"M7 21H5a2 2 0 0 1-2-2v-2\"/><path d=\"M8 14s1.5 2 4 2 4-2 4-2\"/><path d=\"M9 9h.01\"/><path d=\"M15 9h.01\"/></svg></span>ID Photo Studio</a><p class=\"ds-privacy\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#a5b4fc\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/></svg>Processed on your device. Nothing is uploaded.</p></header>",
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; padding: 0 32px; border-bottom: 1px solid rgba(255,255,255,0.06); background: #0a0a0a; font-family: Geist, ui-sans-serif, system-ui, sans-serif; } .ds-brand { display: flex; align-items: center; gap: 12px; color: #f5f5f5; font-size: 15px; font-weight: 600; letter-spacing: -0.025em; text-decoration: none; border-radius: 8px; } .ds-brand:focus-visible { outline: 2px solid var(--ring, #818cf8); outline-offset: 2px; } .ds-logo { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; background: linear-gradient(to bottom, #404040, #171717); box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 2px 6px rgba(0,0,0,0.5); } .ds-privacy { display: flex; align-items: center; gap: 8px; margin: 0; color: #a3a3a3; font-size: 14px; }"
+    },
+    {
+      "name": "Crop Stage",
+      "kind": "custom",
+      "description": "Recessed square stage with the crop guide: inset frame, indigo face oval, chin line.",
+      "html": "<div class=\"ds-stage\"><div class=\"ds-guide\"><span class=\"ds-oval\"></span><span class=\"ds-chin\"></span></div></div>",
+      "css": ".ds-stage { position: relative; width: 240px; aspect-ratio: 1; overflow: hidden; border-radius: 16px; background: linear-gradient(to bottom, #cbd5e1, #94a3b8); box-shadow: inset 0 1px 3px rgba(0,0,0,0.8), 0 1px 0 rgba(255,255,255,0.05); } .ds-guide { position: absolute; inset: 8%; border: 1px solid rgba(255,255,255,0.7); box-shadow: 0 0 0 1px rgba(10,10,10,0.3); } .ds-oval { position: absolute; top: 13%; left: 50%; width: 56%; height: 56%; transform: translateX(-50%); border: 2px solid #818cf8; border-radius: 9999px; box-shadow: 0 0 0 1px rgba(10,10,10,0.35), inset 0 0 0 1px rgba(10,10,10,0.35); } .ds-chin { position: absolute; top: 69%; left: 0; right: 0; height: 1px; background: rgba(255,255,255,0.7); box-shadow: 0 1px 0 rgba(10,10,10,0.3); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Darkroom Bench",
+    "overview": "A dark, dense, single-purpose tool at cult-ui showcase finish. The page is the editor: a slim header, a short headline, then two machined cards (crop stage left, print settings right) on a near-black ground. Surfaces are built from stacked hairline borders and soft gradients rather than color, so the portrait, which is the only colorful thing on screen, carries the eye.\n\nThe world is dark-only. `.dark` sits on `<html>` and the cult-ui components key their look off it; there is no light theme to maintain. One indigo accent does all the signalling, the white texture button is the single call to action, and every measurement reads in Geist Mono with tabular figures. It refuses both the light government-form look and the neon-glow AI-tool look.",
+    "keyCharacteristics": [
+      "Near-black ground (#0a0a0a) with layered texture cards of nested hairline borders.",
+      "One indigo accent for selection, focus, the crop guide, the switch-on state and the dropzone rim.",
+      "White texture primary button as the one call to action.",
+      "Geist for all text, Geist Mono only for measurements.",
+      "Recessed wells for inputs and raised gradient bubbles for selected state.",
+      "One authored motion: the portrait settles from blur to sharp."
+    ],
+    "rules": [
+      { "name": "The One Indigo Rule", "body": "Indigo means \"selected, focused or aimed\". It never fills a card, a heading or a call to action; if something indigo is not interactive state or the crop guide, it is wrong.", "section": "colors" },
+      { "name": "The Color Is The Photo Rule", "body": "The chrome stays grayscale so the portrait is the only saturated object in the viewport.", "section": "colors" },
+      { "name": "The Mono Measures Rule", "body": "Geist Mono appears only where a number is a measurement (px, dpi, %, n/40). Prose and labels never use it.", "section": "typography" },
+      { "name": "The Soft Light Rule", "body": "All shadows are blurred and vertical, lit from above. No hard offset shadows, no colored glows at rest; the indigo rim on the dropzone appears only while the dropzone is hovered, focused or dragged over.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the ground at Bench Black (#0a0a0a) and build depth from nested hairlines, wells and raised gradients.",
+      "Do spend indigo only on selection, focus, the crop guide, the switch-on state and the dropzone rim.",
+      "Do keep the white texture primary button as the one call to action per screen.",
+      "Do set every measurement in Geist Mono with tabular figures.",
+      "Do keep radii concentric: an outer container is rounder than what it holds.",
+      "Do honor reduced motion: the settle entrance is removed, never shortened."
+    ],
+    "donts": [
+      "Don't add a light theme or a second accent hue; amber is for warnings only.",
+      "Don't use hard offset shadows or colored glows at rest; the indigo rim exists only while the dropzone is hovered, focused or dragged over.",
+      "Don't put Geist Mono on prose, labels or headings.",
+      "Don't use Print Ink or Print Paper in the interface; they belong to the exported PNG.",
+      "Don't add authored motion beyond the settle entrance, the segmented bubble and the rolling readout."
+    ]
+  }
+}

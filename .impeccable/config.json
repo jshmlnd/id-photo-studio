@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "geist",
+        "createdAt": "2026-11-21T07:36:53.813Z",
+        "reason": "user picked the canon dark-SaaS direction with the cult-ui showcase as quality bar; Geist is cult-ui's native face"
+      }
+    ]
+  }
+}
